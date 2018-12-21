@@ -1,6 +1,7 @@
 /**
  * es6 modules and imports
  */
+//import our javascript here:
 import sayHello from './hello';
 sayHello('World');
 
@@ -25,7 +26,7 @@ getMovies().then((movies) => {
   console.log('Here are all the movies:');
   movies.forEach(({title, rating, id}) => {
     $("#movie-header").html("Movies");
-    $("#movie-list").append(`<li id=`${id}`>id#${id} - ${title} - rating: ${rating}</li>`);
+    $("#movie-list").append(`<li id=${id}>id#${id} - ${title} - rating: ${rating}</li>`);
     console.log(`id#${id} - ${title} - rating: ${rating}`);
     $(".hidden-on-load").css("display", "inline-block");
   });
@@ -35,7 +36,6 @@ getMovies().then((movies) => {
 });
 
 
-//import our javascript here:
 
 
 
@@ -68,7 +68,8 @@ addMovie(newMovie)
   .then(function (movie) {
     appendMovie(movie)
 
-
+   $('#movie-title').val("");
+  //  add something in here to clear out the stars after submit is clicked
   })
 })
 
