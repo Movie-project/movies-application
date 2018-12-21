@@ -42,7 +42,7 @@ readAndRenderMovies();
 //delete button click function:
 $("#movie-list").on('click', '.delete', function(event){
     var id = $(event.target).val();
-
+    $("#loading").show();
     deleteMovie(id).then(function(){
         $("#movie-list").html("");
         readAndRenderMovies();
