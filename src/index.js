@@ -18,7 +18,7 @@ const {getMovies, addMovie, deleteMovie} = require('./api.js');
 //appends to html
 function appendMovie(movie){
   const {id, title, rating} = movie;
-  $("#movie-list").append(`<div>id#${id} - ${title} - rating: ${rating}<button type="button" value="${id}" class="delete">delete</button></div>`);
+  $("#movie-list").append(`<div>id#${id} - ${title} - rating: ${rating} <button class="edit" value="${title}">Edit</button> <button type="button" value="${id}" class="delete">delete</button></div>`);
 }
 
 //reloading list
@@ -28,7 +28,7 @@ function readAndRenderMovies() {
         console.log('Here are all the movies:');
         movies.forEach(({title, rating, id}) => {
             $("#movie-header").html("Movies");
-            $("#movie-list").append(`<div id="${id}"> ${title} - rating: ${rating}<button type="button" value="${id}" class="delete">delete</button></div>`);
+            $("#movie-list").append(`<div id="${id}"> ${title} - rating: ${rating} <button class="edit" value="${title}">Edit</button> <button type="button" value="${id}" class="delete">delete</button></div>`);
             console.log(`id#${id} - ${title} - rating: ${rating}`);
             $(".hidden-on-load").css("display", "inline-block");
         });
@@ -49,19 +49,19 @@ $("#movie-list").on('click', '.delete', function(event){
     });
 });
 
+//edit button and function:
 
+$(document).on('click', '.edit', function(event){
+  // $(".hidden-edit-form").css("display", "inline-block");
+  var id = $(event.target).val();
+  $(".edit-form").show();
+  // editMovie(id)
+  //   .then(function(){
+  //   $("#movie-list").html("");
+  //   readAndRenderMovies();
+  // });
+});
 
-
-// $('#delete-btn').click(function(){
-//     $("[value*='delete']").remove();
-//     console.log('hi');
-//     deleteMovie();
-// });
-//
-// $("#movie-list .delete").click(function() {
-//     // deleteMovie().then(data => console.log(data));
-//     console.log('hello');
-// });
 
 
 //loading animation js----------------------------------/

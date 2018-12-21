@@ -17,6 +17,20 @@ module.exports = {
       .then(response => response.json());
   },
 
+  editMovie: (id) => {
+    console.log(id);
+    const url = `/api/movies/${id}`;
+    const options = {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      // body: JSON.stringify(id),
+    };
+    return fetch(url, options)
+      .then(response => response.json());
+  },
+
     deleteMovie: (id) => {
     console.log(id);
         const url = `/api/movies/${id}`;

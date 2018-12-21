@@ -22,7 +22,7 @@
     </div>
     <br>
 
-<!-------------FORM HERE---------->
+<!-------------ENTER A MOVIE FORM HERE---------->
     <div class="form hidden-on-load">
         <label>Add Movie
             <input id="movie-title" autofocus placeholder="Enter a Movie Title">
@@ -66,6 +66,49 @@
             <br>
             <button type="submit" id="add-movie-btn">Add Movie</button>
     </div>
+
+    <!--EDIT MOVIE FORM-->
+    <hr>
+    <form class="edit-form hidden-edit-form">
+        <label><h1>Edit Movie Title</h1><input></label>
+        <br>
+        <h1>Edit your rating: </h1>
+        <!--edit star rating-->
+        <input type="hidden" id="edit-rating">
+        <div class="rating">
+            <label>
+                <input type="radio" name="stars" value="1" />
+                <span class="icon">★</span>
+            </label>
+            <label>
+                <input type="radio" name="stars" value="2" />
+                <span class="icon">★</span>
+                <span class="icon">★</span>
+            </label>
+            <label>
+                <input type="radio" name="stars" value="3" />
+                <span class="icon">★</span>
+                <span class="icon">★</span>
+                <span class="icon">★</span>
+            </label>
+            <label>
+                <input type="radio" name="stars" value="4" />
+                <span class="icon">★</span>
+                <span class="icon">★</span>
+                <span class="icon">★</span>
+                <span class="icon">★</span>
+            </label>
+            <label>
+                <input type="radio" name="stars" value="5" />
+                <span class="icon">★</span>
+                <span class="icon">★</span>
+                <span class="icon">★</span>
+                <span class="icon">★</span>
+                <span class="icon">★</span>
+            </label>
+        </div>
+        <button type="submit" id="save-movie">Save Changes</button>
+    </form>
 
 
 
