@@ -12,14 +12,20 @@ const $ = require("jquery");
 /**
  * require style imports
  */
-const {getMovies} = require('./api.js');
+const {getMovies, addMovie} = require('./api.js');
+
+function appendMovie(movie){
+  const {id, title, rating} = movie;
+  $("#movie-list").append(`<li>id#${id} - ${title} - rating: ${rating}</li>`);
+
+}
 
 getMovies().then((movies) => {
   $("#loading").hide();
   console.log('Here are all the movies:');
   movies.forEach(({title, rating, id}) => {
     $("#movie-header").html("Movies");
-    $("#movie-list").append(`<li>id#${id} - ${title} - rating: ${rating}</li>`);
+    $("#movie-list").append(`<li id=`${id}`>id#${id} - ${title} - rating: ${rating}</li>`);
     console.log(`id#${id} - ${title} - rating: ${rating}`);
     $(".hidden-on-load").css("display", "inline-block");
   });
@@ -58,18 +64,14 @@ let rating = $('#rating').val();
 
 const newMovie = {title: movieTitle, rating: rating};
 console.log(newMovie);
-const url = '/api/movies';
-const options = {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json',
-  },
-  body: JSON.stringify(newMovie),
-};
-fetch(url, options)
-  .then('New movie added!')
-  // .catch(console.log(error(e)));
+addMovie(newMovie)
+  .then(function (movie) {
+    appendMovie(movie)
+
+
+  })
 })
+
 
 //End of api for adding movies------------------------/
 
