@@ -7,6 +7,8 @@
     <!--animated loading js---------->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+    <!--bootstrap for star rating---->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
 </head>
@@ -18,7 +20,52 @@
         <div id="movie-header"></div>
         <ul id="movie-list"></ul>
     </div>
+    <br>
 
+<!-------------FORM HERE---------->
+    <div class="form hidden-on-load">
+        <label>Add Movie
+            <input id="movie-title" autofocus placeholder="Enter a Movie Title">
+            <br>
+            <!--star rating -->
+            <input type="hidden" id="rating">
+            <div class="rating">
+                <label>
+                    <input type="radio" name="stars" value="1" />
+                    <span class="icon">★</span>
+                </label>
+                <label>
+                    <input type="radio" name="stars" value="2" />
+                    <span class="icon">★</span>
+                    <span class="icon">★</span>
+                </label>
+                <label>
+                    <input type="radio" name="stars" value="3" />
+                    <span class="icon">★</span>
+                    <span class="icon">★</span>
+                    <span class="icon">★</span>
+                </label>
+                <label>
+                    <input type="radio" name="stars" value="4" />
+                    <span class="icon">★</span>
+                    <span class="icon">★</span>
+                    <span class="icon">★</span>
+                    <span class="icon">★</span>
+                </label>
+                <label>
+                    <input type="radio" name="stars" value="5" />
+                    <span class="icon">★</span>
+                    <span class="icon">★</span>
+                    <span class="icon">★</span>
+                    <span class="icon">★</span>
+                    <span class="icon">★</span>
+                </label>
+            </div>
+            <!--end of star rating-->
+        </label>
+            <br>
+            <button type="submit" id="add-movie-btn">Add Movie</button>
+    </div>
 
 
 
