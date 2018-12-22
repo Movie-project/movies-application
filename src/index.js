@@ -13,7 +13,7 @@ const $ = require("jquery");
 /**
  * require style imports
  */
-const {getMovies, addMovie, deleteMovie} = require('./api.js');
+const {getMovies, addMovie, editMovie, deleteMovie} = require('./api.js');
 
 //appends to html
 function appendMovie(movie){
@@ -52,14 +52,22 @@ $("#movie-list").on('click', '.delete', function(event){
 //edit button and function:
 
 $(document).on('click', '.edit', function(event){
-  // $(".hidden-edit-form").css("display", "inline-block");
   var id = $(event.target).val();
+  console.log(id);
   $(".edit-form").show();
-  // editMovie(id)
-  //   .then(function(){
-  //   $("#movie-list").html("");
-  //   readAndRenderMovies();
-  // });
+  $("#edit-input").val(id);
+  // var titleEdit = $("#edit-input").val();
+  // console.log(titleEdit);
+  $("#save-movie").click(function () {
+  id = $("#edit-input").val();
+  const editedMovie = {title: id, rating: rating};
+    console.log(editedMovie);
+    editMovie(editedMovie)
+      .then(function(){
+      $("#movie-list").html("");
+      readAndRenderMovies();
+    });
+  })
 });
 
 

@@ -16,11 +16,6 @@
       "id": 3
     },
     {
-      "title": "Delete this one",
-      "rating": "5",
-      "id": 6
-    },
-    {
       "title": "delete this one too",
       "rating": "5",
       "id": 7
@@ -29,6 +24,16 @@
       "title": "",
       "rating": "",
       "id": 10
+    },
+    {
+      "title": "JURASSIC PARK!!!!",
+      "rating": {},
+      "id": 11
+    },
+    {
+      "title": "SUP GIRRRLL",
+      "rating": "3",
+      "id": 12
     }
   ]
 }

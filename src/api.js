@@ -17,15 +17,15 @@ module.exports = {
       .then(response => response.json());
   },
 
-  editMovie: (id) => {
-    console.log(id);
-    const url = `/api/movies/${id}`;
+  editMovie: (editedMovie) => {
+    console.log(editedMovie);
+    const url = `/api/${editedMovie}`;
     const options = {
-      method: 'PUT',
+      method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
       },
-      // body: JSON.stringify(id),
+      body: JSON.stringify(editedMovie),
     };
     return fetch(url, options)
       .then(response => response.json());
