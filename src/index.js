@@ -27,7 +27,7 @@ const {getMovies, addMovie, editMovie, deleteMovie} = require('./api.js');
 //appends to html
 function appendMovie(movie){
   const {id, title, rating} = movie;
-  $("#movie-list").append(`<div>id#${id} - ${title} - rating: ${rating} <button class="edit" value="${title},${rating}, ${id}">Edit</button> <button type="button" value="${id}" class="delete">delete</button></div>`);
+  $("#movie-list").append(`<div>id#${id} - ${title} - rating: ${rating} <button class="edit" value="${title}-${rating}- ${id}">Edit</button> <button type="button" value="${id}" class="delete">delete</button></div>`);
 }
 
 //reloading list
@@ -37,7 +37,7 @@ function readAndRenderMovies() {
         console.log('Here are all the movies:');
         movies.forEach(({title, rating, id}) => {
             $("#movie-header").html("Movies");
-            $("#movie-list").append(`<div id="${id}"> ${title} - rating: ${rating} <button class="edit" value="${title},${rating},${id}">Edit</button> <button type="button" value="${id}" class="delete">delete</button></div>`);
+            $("#movie-list").append(`<div id="${id}"> ${title} - rating: ${rating} <button class="edit" value="${title}-${rating}-${id}">Edit</button> <button type="button" value="${id}" class="delete">delete</button></div>`);
             console.log(`id#${id} - ${title} - rating: ${rating}`);
             $(".hidden-on-load").css("display", "inline-block");
         });
@@ -91,7 +91,7 @@ $("#movie-list").on('click', '.delete', function(event){
 $(document).on('click', '.edit', function(event){
  let movie = $(event.target).val();
  // gets title, rating, id string and splits into array
- movie = movie.split(',');
+ movie = movie.split('-');
   console.log(movie);
   $(".edit-form").show();
   //populates edit movie input with movie title
@@ -111,7 +111,7 @@ $(document).on('click', '#save-movie', function (event) {
   let newRating = $('#edit-rating').val();
   console.log(editTitle);
   console.log(newRating);
-  if((editTitle === '') || rating === ''){
+  if((editTitle === '') || newRating === ''){
     alert('OOPS! No values were entered. Please enter movie information and try again.')
   } else {
 //CREATE OBJECT AND ADD TO JSON
