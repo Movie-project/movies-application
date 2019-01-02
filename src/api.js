@@ -17,9 +17,9 @@ module.exports = {
       .then(response => response.json());
   },
 
-  editMovie: (editedMovie) => {
-    console.log(editedMovie);
-    const url = `/api/${editedMovie}`;
+  editMovie: (id, editedMovie) => {
+    console.log(id);
+    const url = `/api/movies/${id}`;
     const options = {
       method: 'PATCH',
       headers: {
@@ -30,6 +30,7 @@ module.exports = {
     return fetch(url, options)
       .then(response => response.json());
   },
+
 
     deleteMovie: (id) => {
     console.log(id);
