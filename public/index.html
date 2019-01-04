@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8" />
     <title>My Application</title>
+    <!--bootstrap stylesheet-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="/style.css" />
     <!--animated loading js---------->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
@@ -14,12 +16,35 @@
 </head>
 <body>
 
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Movie Box</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#movie-title">Add Movie <span class="sr-only">(current)</span></a>
+            </li>
+
+        </ul>
+    </div>
+</nav>
+
+
+
+
     <div class="container">
+
         <div class="se-pre-con"></div>
-        <div id="loading"><img src="./Preloader_7.gif"></div>
+            <div id="loading"><img src="./Preloader_7.gif"></div>
+
         <div id="movie-header"></div>
         <div id="movie-list"></div>
-        <hr>
+
     </div>
     <br>
 
@@ -65,11 +90,11 @@
             <!--end of star rating-->
         </label>
             <br>
-            <button type="submit" id="add-movie-btn">Add Movie</button>
+            <button type="submit" id="add-movie-btn" class="btn btn-secondary">Add Movie</button>
     </div>
 
     <!--EDIT MOVIE FORM-->
-    <hr>
+
     <form class="edit-form hidden-edit-form">
         <label><h1>Edit Movie Title</h1><input id="edit-input"></label>
         <br>
@@ -108,12 +133,15 @@
                 <span class="icon">★</span>
             </label>
         </div>
-        <button type="button" id="save-movie">Save Changes</button>
+        <button type="button" id="save-movie" class="btn btn-secondary">Save Changes</button>
     </form>
 
 
 
 <!--our javascript--------------->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
     <script src="/main.js"></script>
 
 

@@ -27,7 +27,7 @@ const {getMovies, addMovie, editMovie, deleteMovie} = require('./api.js');
 //appends to html
 function appendMovie(movie){
   const {id, title, rating} = movie;
-  $("#movie-list").append(`<div>id#${id} - ${title} - rating: ${rating} <button class="edit" value="${title}-${rating}- ${id}">Edit</button> <button type="button" value="${id}" class="delete">delete</button></div>`);
+  $("#movie-list").append(`<div>id#${id} - ${title} - rating: ${rating} <button class="edit btn btn-outline-info btn-sm" value="${title}-${rating}- ${id}">✏️</button> <button type="button" value="${id}" class="delete btn btn-outline-danger btn-sm">🗑</button></div>`);
 }
 
 //reloading list
@@ -37,7 +37,7 @@ function readAndRenderMovies() {
         console.log('Here are all the movies:');
         movies.forEach(({title, rating, id}) => {
             $("#movie-header").html("Movies");
-            $("#movie-list").append(`<div id="${id}"> ${title} - rating: ${rating} <button class="edit" value="${title}-${rating}-${id}">Edit</button> <button type="button" value="${id}" class="delete">delete</button></div>`);
+            $("#movie-list").append(`<div id="${id}"> ${title} - rating: ${rating} <button class="edit btn btn-outline-info btn-sm" value="${title}-${rating}-${id}">✏️</button><button type="button" value="${id}" class="delete btn btn-outline-danger btn-sm">🗑</button></div>`);
             console.log(`id#${id} - ${title} - rating: ${rating}`);
             $(".hidden-on-load").css("display", "inline-block");
         });
