@@ -89,7 +89,9 @@ $("#movie-list").on('click', '.delete', function(event){
 //EDIT BUTTON AND FUNCTIONS TO SAVE NEW INPUTS
 
 $(document).on('click', '.edit', function(event){
- let movie = $(event.target).val();
+    event.preventDefault();
+ var movie = $(event.target).val();
+ console.log(movie);
  // gets title, rating, id string and splits into array
  movie = movie.split('-');
   console.log(movie);
@@ -106,7 +108,8 @@ $(document).on('click', '.edit', function(event){
   });
 
 // separate function for when Save Btn clicked :
-$(document).on('click', '#save-movie', function (event) {
+$(document).on('click', '#save-movie', function (e) {
+  e.preventDefault();
   let editTitle = $("#edit-input").val();
   let newRating = $('#edit-rating').val();
   console.log(editTitle);
@@ -120,6 +123,7 @@ $(document).on('click', '#save-movie', function (event) {
     $("#loading").show();
     editMovie(movie[2], editedMovie).then(function () {
       $("#movie-list").html("");
+      console.log("save button clicked");
       readAndRenderMovies();
       });
     }
