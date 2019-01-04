@@ -1,24 +1,64 @@
 {
   "movies": [
     {
-      "title": "Casablanca",
+      "title": "Avengers: Infinity War",
       "rating": "4",
       "id": 1
     },
     {
-      "title": "Star Wars: A New Hope",
+      "title": "Hereditary",
       "rating": "5",
       "id": 2
     },
     {
-      "title": "EDIT #2",
-      "rating": "2",
+      "title": "Bird Box",
+      "rating": "4",
       "id": 3
     },
     {
-      "title": "EDIT #2",
+      "title": "Incredibles 2",
+      "rating": "4",
+      "id": 4
+    },
+    {
+      "title": "Crazy Rich Asians",
+      "rating": "5",
+      "id": 5
+    },
+    {
+      "title": "Won't You Be My Neighbor?",
+      "rating": "4",
+      "id": 6
+    },
+    {
+      "title": "Game Night",
+      "rating": "1",
+      "id": 7
+    },
+    {
+      "title": "Mandy",
+      "rating": "1",
+      "id": 8
+    },
+    {
+      "title": "Deadpool",
       "rating": "2",
-      "id": 15
+      "id": 9
+    },
+    {
+      "title": "Bohemian Rhapsody",
+      "rating": "5",
+      "id": 10
+    },
+    {
+      "title": "Eighth Grade",
+      "rating": "3",
+      "id": 11
+    },
+    {
+      "title": "Sorry to Bother You",
+      "rating": "2",
+      "id": 12
     }
   ]
 }
