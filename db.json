@@ -3,7 +3,8 @@
     {
       "title": "Avengers: Infinity War",
       "rating": "4",
-      "id": 1
+      "id": 1,
+      "image": "public/img/avengers.jpg"
     },
     {
       "title": "Hereditary",
@@ -59,11 +60,6 @@
       "title": "Sorry to Bother You",
       "rating": "2",
       "id": 12
-    },
-    {
-      "title": "",
-      "rating": "",
-      "id": 13
     }
   ]
 }

@@ -37,7 +37,7 @@ function readAndRenderMovies() {
         console.log('Here are all the movies:');
         movies.forEach(({title, rating, id}) => {
             $("#movie-header").html("Movies");
-            $("#movie-list").append(`<div id="${id}"> ${title} - rating: ${rating} <button class="edit btn btn-outline-info btn-sm" value="${title}-${rating}-${id}">✏️</button><button type="button" value="${id}" class="delete btn btn-outline-danger btn-sm">🗑</button></div>`);
+            $("#movie-list").append(`<div id="${id}" class="card-deck card-align"><div class="row"><div class="card col"><div class="card-body"><h5 class="card-title">${title}</h5><p class="card-text">rating: ${rating}</p><br><button class="edit btn btn-outline-info btn-sm" value="${title}-${rating}-${id}">✏️</button><button type="button" value="${id}" class="delete btn btn-outline-danger btn-sm">🗑</button></div></div></div></div>`);
             console.log(`id#${id} - ${title} - rating: ${rating}`);
             $(".hidden-on-load").css("display", "inline-block");
         });

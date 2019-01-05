@@ -10,8 +10,16 @@ html, body {
     display: none;
 }
 
+.card {
+    background-color: whitesmoke;
+}
 
-
+.card-align {
+    display: inline-block;
+    height: 200px;
+    width: 200px;
+    margin: 1em;
+}
 
 /*loading animation------------------------------------------------------*/
 /*if it's not present, don't show loader *!*/
