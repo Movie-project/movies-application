@@ -34,6 +34,12 @@ html, body {
     text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
     text-align: center;
     margin-bottom: 2em;
+    font-family: 'Alfa Slab One', cursive;
+}
+
+
+h1{
+    font-family: 'Alfa Slab One', cursive;
 }
 
 /*parallax styling*/
@@ -160,7 +166,7 @@ html, body {
 
 #add-movie-card{
     display: inline-block;
-    height: 200px;
+    height: 300px;
     width: 400px;
     padding-top: 2em;
     background-color: white;

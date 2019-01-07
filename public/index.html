@@ -11,6 +11,8 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
     <!--bootstrap for star rating---->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One" rel="stylesheet">
 
 
 </head>
@@ -50,7 +52,7 @@
 <!-------------ENTER A MOVIE FORM HERE---------->
     <div class="form card-deck card-align">
         <div class="card" id="add-movie-card">
-        <label>Add Movie
+            <label><h1>Add Movie</h1>
             <input id="movie-title" placeholder="Enter a Movie Title">
             <br>
             <!--star rating -->
@@ -110,7 +112,7 @@
 
     <form class="edit-form hidden-edit-form">
         <a href="edit"></a>
-        <label><h1>Edit Movie Title</h1><input id="edit-input"></label>
+        <label><h1>Edit Movie Title:</h1><input id="edit-input"></label>
         <br>
         <h1>Edit your rating: </h1>
         <!--edit star rating-->
@@ -147,6 +149,7 @@
                 <span class="icon">★</span>
             </label>
         </div>
+        <br>
         <button type="button" id="save-movie" class="btn btn-secondary">Save Changes</button>
     </form>
 
