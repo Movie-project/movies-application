@@ -2,9 +2,44 @@ html, body {
     height: 100%;
 }
 
+
+
+.typewriter h1 {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation:
+            typing 3.5s steps(40, end),
+            blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+ The typewriter cursor effect
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+}
+
+
+#fancy-header {
+    font-size: 100px;
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+/*parallax styling*/
 .parallax {
-    background-image: url("img/avengers-action.png");
-    height: 350px;
+    background-image: url("img/bird-box.jpg");
+    height: 130px;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -12,8 +47,8 @@ html, body {
 }
 
 #slide {
-    background-image: url("img/avengers-action.png");
-    height: 350px;
+    background-image: url("img/bird-box.jpg");
+    height: 400px;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -21,8 +56,8 @@ html, body {
 }
 
 #slide1 {
-    background-image: url("img/crazy-rich-asians.jpg");
-    height: 350px;
+    background-image: url("img/bohemian-rhapsody.jpg");
+    height: 400px;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -30,8 +65,8 @@ html, body {
 }
 
 #slide2 {
-    background-image: url("img/bird-box.jpg");
-    height: 350px;
+    background-image: url("img/crazy-rich-asians.jpg");
+    height: 400px;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -39,8 +74,8 @@ html, body {
 }
 
 #slide3 {
-    background-image: url("img/bohemian-rhapsody.jpg");
-    height: 350px;
+    background-image: url("img/avengers-action.png");
+    height: 400px;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -49,7 +84,7 @@ html, body {
 
 #slide4 {
     background-image: url("img/game-night-movie.jpg");
-    height: 350px;
+    height: 400px;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -58,7 +93,7 @@ html, body {
 
 #slide5 {
     background-image: url("img/hereditary.jpg");
-    height: 350px;
+    height: 400px;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -67,7 +102,7 @@ html, body {
 
 #slide6 {
     background-image: url("img/incredibles.jpeg");
-    height: 350px;
+    height: 400px;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -76,7 +111,7 @@ html, body {
 
 #slide7 {
     background-image: url("img/neighbor.jpg");
-    height: 350px;
+    height: 400px;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -85,7 +120,7 @@ html, body {
 
 #slide8 {
     background-image: url("img/sorry.jpg");
-    height: 350px;
+    height: 400px;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -98,7 +133,7 @@ html, body {
     background: rgb(255, 255, 255);
     background: rgba(255, 255, 255, 0); /*In rgba, the a has no effect*/
 }
-
+/* END parallax styling*/
 
 .hidden-on-load {
     display: none;
@@ -106,10 +141,12 @@ html, body {
 
 .hidden-edit-form {
     display: none;
+    text-align: center;
 }
 
 .card {
     background-color: whitesmoke;
+    box-shadow: 1px 1px 5px black, 0 0 25px black, 0 0 50px darkblue;
 }
 
 .card-align {
@@ -118,8 +155,6 @@ html, body {
     width: 300px;
     margin-left: 15em;
 }
-
-
 
 
 
