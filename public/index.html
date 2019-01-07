@@ -33,25 +33,25 @@
         </ul>
     </div>
 </nav>
-
-
-
-
-    <div class="container">
-
         <div class="se-pre-con"></div>
             <div id="loading"><img src="./Preloader_7.gif"></div>
+<div class="hidden-on-load">
+    <div class="parallax">
+        <div class="parallax-curtain">
+            <div id="movie-header"></div>
+            <div class="left-margin" id="movie-list"></div>
 
-        <div id="movie-header"></div>
-        <div id="movie-list"></div>
 
-    </div>
+
+
+
     <br>
 
 <!-------------ENTER A MOVIE FORM HERE---------->
-    <div class="form hidden-on-load">
+    <div class="form card-deck card-align">
+        <div class="card" id="add-movie-card">
         <label>Add Movie
-            <input id="movie-title" autofocus placeholder="Enter a Movie Title">
+            <input id="movie-title" placeholder="Enter a Movie Title">
             <br>
             <!--star rating -->
             <input type="hidden" id="rating">
@@ -92,6 +92,19 @@
             <br>
             <button type="submit" id="add-movie-btn" class="btn btn-secondary">Add Movie</button>
     </div>
+    </div>
+        </div>
+    </div>
+    <div id="slide"></div>
+    <div id="slide1"></div>
+    <div id="slide2"></div>
+    <div id="slide3"></div>
+    <div id="slide4"></div>
+    <div id="slide5"></div>
+    <div id="slide6"></div>
+    <div id="slide7"></div>
+    <div id="slide8"></div>
+</div>
 
     <!--EDIT MOVIE FORM-->
 
@@ -136,13 +149,18 @@
         <button type="button" id="save-movie" class="btn btn-secondary">Save Changes</button>
     </form>
 
-<footer>
-    <div class="navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Movie Box</a>
-    </div>
-</footer>
+
+
+
+<!--<footer>-->
+    <!--<div class="navbar-dark bg-dark">-->
+        <!--<a class="navbar-brand" href="#">Movie Box</a>-->
+    <!--</div>-->
+<!--</footer>-->
 
 <!--our javascript--------------->
+<!--parallax plugin-->
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>

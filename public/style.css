@@ -2,6 +2,104 @@ html, body {
     height: 100%;
 }
 
+.parallax {
+    background-image: url("img/avengers-action.png");
+    height: 350px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#slide {
+    background-image: url("img/avengers-action.png");
+    height: 350px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#slide1 {
+    background-image: url("img/crazy-rich-asians.jpg");
+    height: 350px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#slide2 {
+    background-image: url("img/bird-box.jpg");
+    height: 350px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#slide3 {
+    background-image: url("img/bohemian-rhapsody.jpg");
+    height: 350px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#slide4 {
+    background-image: url("img/game-night-movie.jpg");
+    height: 350px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#slide5 {
+    background-image: url("img/hereditary.jpg");
+    height: 350px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#slide6 {
+    background-image: url("img/incredibles.jpeg");
+    height: 350px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#slide7 {
+    background-image: url("img/neighbor.jpg");
+    height: 350px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#slide8 {
+    background-image: url("img/sorry.jpg");
+    height: 350px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.parallax-curtain{
+    height: 100%;
+    background: rgb(255, 255, 255);
+    background: rgba(255, 255, 255, 0); /*In rgba, the a has no effect*/
+}
+
+
 .hidden-on-load {
     display: none;
 }
@@ -16,9 +114,27 @@ html, body {
 
 .card-align {
     display: inline-block;
+    height: 300px;
+    width: 300px;
+    margin-left: 15em;
+}
+
+
+
+
+
+#add-movie-card{
+    display: inline-block;
     height: 200px;
-    width: 200px;
-    margin: 1em;
+    width: 400px;
+    padding-top: 2em;
+    background-color: white;
+    text-align: center;
+    margin-left: 13em;
+}
+
+.left-margin: {
+    margin-left: 23em;
 }
 
 /*loading animation------------------------------------------------------*/
